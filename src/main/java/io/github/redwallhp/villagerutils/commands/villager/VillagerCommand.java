@@ -1,7 +1,6 @@
 package io.github.redwallhp.villagerutils.commands.villager;
 
 import org.bukkit.command.CommandSender;
-
 import io.github.redwallhp.villagerutils.VillagerUtils;
 import io.github.redwallhp.villagerutils.commands.AbstractCommand;
 
@@ -28,6 +27,7 @@ public class VillagerCommand extends AbstractCommand {
         addSubCommand(new SpawnFileCommand(plugin));
         addSubCommand(new ListFilesCommand(plugin));
         addSubCommand(new DeleteFileCommand(plugin));
+        addSubCommand(new SetHOTVCommand(plugin));
     }
 
     @Override

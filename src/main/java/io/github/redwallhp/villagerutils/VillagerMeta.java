@@ -17,6 +17,7 @@ public class VillagerMeta {
 
 
     public List<String> STATIC_MERCHANTS;
+    public List<String> HOTV_MERCHANTS;
 
 
     public VillagerMeta() {
@@ -34,11 +35,13 @@ public class VillagerMeta {
             save();
         }
         STATIC_MERCHANTS = yaml.getStringList("static_merchants");
+        HOTV_MERCHANTS = yaml.getStringList("hotv_merchants");
     }
 
 
     public void save() {
         yaml.set("static_merchants", STATIC_MERCHANTS);
+        yaml.set("hotv_merchants", HOTV_MERCHANTS);
         try {
             yaml.save(file);
         } catch (IOException ex) {

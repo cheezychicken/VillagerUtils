@@ -6,6 +6,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.redwallhp.villagerutils.commands.CommandManager;
+import io.github.redwallhp.villagerutils.listeners.HOTVstopper;
 import io.github.redwallhp.villagerutils.listeners.TradeListener;
 import io.github.redwallhp.villagerutils.listeners.VillagerLogger;
 import io.github.redwallhp.villagerutils.listeners.VillagerProtector;
@@ -31,6 +32,7 @@ public class VillagerUtils extends JavaPlugin {
         new TradeListener();
         new VillagerLogger();
         new VillagerProtector();
+        new HOTVstopper();
 
     }
 

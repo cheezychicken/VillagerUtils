@@ -51,8 +51,12 @@ public class SetStaticCommand extends VillagerSpecificAbstractCommand implements
 
         Boolean value = Boolean.parseBoolean(args[0]);
         if (value) {
+        	if(plugin.getVillagerMeta().STATIC_MERCHANTS.contains(villager.getUniqueId().toString())) {
+        		sender.sendMessage(ChatColor.DARK_AQUA + "This villager already will not acquire its own trades.");
+        	} else {
             plugin.getVillagerMeta().STATIC_MERCHANTS.add(villager.getUniqueId().toString());
             sender.sendMessage(ChatColor.DARK_AQUA + "This villager will not acquire its own trades.");
+        	}
         } else {
             plugin.getVillagerMeta().STATIC_MERCHANTS.remove(villager.getUniqueId().toString());
             sender.sendMessage(ChatColor.DARK_AQUA + "This villager will acquire its own trades");

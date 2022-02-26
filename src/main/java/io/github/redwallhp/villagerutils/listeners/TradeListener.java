@@ -96,6 +96,12 @@ public class TradeListener implements Listener {
                 plugin.getVillagerMeta().STATIC_MERCHANTS.remove(villagerId);
                 plugin.getVillagerMeta().save();
             }
+            
+            //Yes I know this should be in HOTVstopper, sshhhh
+            if (plugin.getVillagerMeta().HOTV_MERCHANTS.contains(villagerId)) {
+                plugin.getVillagerMeta().HOTV_MERCHANTS.remove(villagerId);
+                plugin.getVillagerMeta().save();
+            }
         }
     }
 }
